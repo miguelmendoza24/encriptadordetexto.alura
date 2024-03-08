@@ -1,0 +1,50 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Challenger Encriptador Alura</title>
+     <meta name="description" content="Encriptador Alura">
+     <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="imagen.png" href="imagenes/Logo.png">
+  </head>
+  <body>
+    <header>
+      <img src="imagenes/Logo.png" alt="logo Alura">
+    </header>
+    <main>
+      <section class="seccion1">
+        <textarea class="area" placeholder="Ingrese el texto aqui"></textarea>
+        <div class="alerta">
+      <img src="imagenes/bi_exclamation-circle-fill.png">
+      <p>Solo letras minusculas y sin acentos </p>
+    </div>
+        <div class="contenedor-botnes">
+        <input type="button" class="btn-encriptar" value="encriptar">
+        <input type="button" class="btn-desencriptar" value="desencriptar">
+        </div>
+      </section>
+      <section class="seccion2">
+        <div class="contenedor-munieco" >
+          <img src="imagenes/Muñeco.png" alt="munieco">
+        </div>
+        <div class="contenedor-h3" >
+          <h3>Ningun mensaje fue encontrado</h3>
+        </div>
+        <div class="contenedor-parrafo">
+          <p>Ingrese el texto que desee encriptar o desencriptar</p>
+        </div>
+        <div class="contenedor-resultado">
+          <h4></h4>
+          <p class="texto-resultado"></p>
+        </div>
+        <div class="contenedor-copiar">
+          <input type="button" class="btn-copiar" value="Copiar">
+        </div>
+      </section>
+    </main>
+    <footer>Elaboro: Miguel Mendoza</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
