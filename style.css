@@ -1,5 +1,7 @@
 body {
     background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 #videoFondo {
     position: fixed;
@@ -9,11 +11,30 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    animation: fadeVideo 1s infinite alternate;
 }
 
 @keyframes fadeVideo {
     0% { opacity: 1; }
     100% { opacity: 0.98; }
+}
+
+.container {
+    position: relative; /* Esto asegura que el contenido se muestre encima del video */
+    z-index: 1;
+    padding-top: 50px; /* Espaciado para que el contenido no quede pegado al borde superior */
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7); /* Fondo con opacidad */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10; /* Asegurarse de que el footer esté por encima del video */
 }
 
 
@@ -22,51 +43,17 @@ h1, h4, p {
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* Brillo */
 }
 
-h4 {
-    color: #ddd; /* Color gris suave */
-    text-shadow: none; /* Sin sombra de texto */
-}
-
-
-
-
-textarea {
-    resize: none;
-}
-
-.card {
-    min-height: 200px;
-}
 textarea, .card {
     background: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
     color: white; /* Texto blanco */
     border: 1px solid white;
+    top: 10px;
 }
-
-
-.btn {
-    width: 120px;
-}
-
 
 #textoResultado {
-    background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro para mejorar la legibilidad */
-    color: #000; /* Texto negro */
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil blanco */
-    font-size: 1.1em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
-}
-
-footer {
-    background: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
-    color: white; /* Texto blanco */
-    text-align: center; /* Centrar el texto */
-    padding: 10px 0; /* Espaciado superior e inferior */
-    position: fixed; /* Fijar el footer en la parte inferior */
-    left: 0;
-    bottom: 0;
-    width: 100%; /* Abarca todo el ancho */
-    z-index: 10; /* Asegurarse de que esté por encima del video */
-}
+    background: rgba(255, 255, 255, 0.5);
+    color: black; /* Usar color negro para el texto */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    }
